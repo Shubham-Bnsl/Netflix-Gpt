@@ -1,11 +1,12 @@
 import React from 'react'
-
+import Header from './header'
 const Browser = () => {
   return (
     <div>
-      Browser
+      <Header />
     </div>
   )
 }
 
 export default Browser
+

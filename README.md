@@ -1,4 +1,23 @@
+<!-- Project Started on 15Feb -->
 # Netflix-GPT
+
+-Install Vite
+-Configuered Tailwind
+-Header
+-Routing of App
+-Login Form
+-sign Up Form
+-Forms Validation
+-useRef Hooks
+-Firebase Setup
+-Deploying our app to production
+-Create Signup User Account
+-Implement Sign In user Api
+-Created Redux Store userSlice
+-Implemented Signout
+-Update Profile
+
+
 
 # Features
 
