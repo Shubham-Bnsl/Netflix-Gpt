@@ -4,10 +4,10 @@ import { validateforms } from '../utils/validate'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { Navigate, useNavigate } from 'react-router-dom';
 import {updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVTAR } from '../utils/constants';
 
 
 const Login = () => {
@@ -15,7 +15,6 @@ const Login = () => {
   const [isSignIn,setSignIn] = useState(true)
   const [errorMessage,setErrorMessage] = useState(null)
   
-  const navigate = useNavigate();
   const dispatch = useDispatch();  
 
   const togglebutton =()=>{
@@ -43,7 +42,7 @@ const Login = () => {
               const user = userCredential.user;
               updateProfile(user, {
                 displayName: name.current.value, 
-                photoURL: "https://www.shutterstock.com/shutterstock/photos/2198245029/display_1500/stock-photo-autumn-nature-landscape-lake-bridge-in-fall-forest-path-way-in-gold-woods-romantic-view-image-2198245029.jpg"
+                photoURL: USER_AVTAR
               }).then(() => {
                 // Profile updated!
                 // ...
@@ -56,9 +55,7 @@ const Login = () => {
                     displayName: displayName,
                     photoURL: photoURL,
                   })
-                )
-                navigate("/browser")
-                console.log(user)
+                );
               }).catch((error) => {
                 // An error occurred
                 setErrorMessage(error.message)
@@ -77,9 +74,6 @@ const Login = () => {
             .then((userCredential) => {
               // Signed in 
               const user = userCredential.user;
-              navigate("./browser")
-              console.log(user)
-              // ...
             })
             .catch((error) => {
               const errorCode = error.code;
