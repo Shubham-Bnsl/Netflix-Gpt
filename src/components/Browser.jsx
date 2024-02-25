@@ -4,13 +4,15 @@ import Header from "./header";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies"
 import MainContainer from "./mainContainer";
 import SecondaryContainer from "./secondaryConatiner" 
+import useTrendingMovies from "../hooks/useTrendingMovies";
 
 
 const Browser = () => {
  
     useNowPlayingMovies();
+    useTrendingMovies();
   return (
-    <div>
+    <div className="" >
       <Header />
       <MainContainer/>
       <SecondaryContainer />
