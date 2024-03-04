@@ -38,7 +38,15 @@
 - GPT Search Page
 - GPT Search Bar
 - (BONUS) Multi-Language feature in our App
-- 
+- GET GEmini API KEY
+- get Search API Call
+- Fetched gptMovieSuggestion from TMBD
+- created gptSlice added data
+- Reused Movie List Component 
+- Memoization
+- Added .env file
+- Added .env file to ignore
+- Made our Site Responsive
 
 
 
