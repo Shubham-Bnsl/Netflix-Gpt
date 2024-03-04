@@ -2,8 +2,11 @@ import React from 'react'
 import MovieLists from './movieLists'
 import { useSelector } from 'react-redux'
 
+
 const secondaryConatiner = () => {
   const movies = useSelector((store) => store.movies)
+
+  
  
   return (
     movies.nowPlayingMovies && <div className='bg-black ' >
